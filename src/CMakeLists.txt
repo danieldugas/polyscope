@@ -201,77 +201,105 @@ SET(SRCS
 
 # Setting headers is useful for some build systems. For instance, in Visual Studio this is necessary for the header files to be indexed as a part of the project.
 SET(HEADERS
-  ${INCLUDE_ROOT}/affine_remapper.h
-  ${INCLUDE_ROOT}/affine_remapper.ipp
-  ${INCLUDE_ROOT}/camera_parameters.h
-  ${INCLUDE_ROOT}/color_management.h
-  ${INCLUDE_ROOT}/colors.h
-  ${INCLUDE_ROOT}/combining_hash_functions.h
-  ${INCLUDE_ROOT}/curve_network.h
-  ${INCLUDE_ROOT}/curve_network.ipp
-  ${INCLUDE_ROOT}/curve_network_color_quantity.h
-  ${INCLUDE_ROOT}/curve_network_quantity.h
-  ${INCLUDE_ROOT}/curve_network_scalar_quantity.h
-  ${INCLUDE_ROOT}/curve_network_vector_quantity.h
-  ${INCLUDE_ROOT}/disjoint_sets.h
-  ${INCLUDE_ROOT}/file_helpers.h
-  ${INCLUDE_ROOT}/histogram.h
-  ${INCLUDE_ROOT}/image_scalar_artist.h
-  ${INCLUDE_ROOT}/imgui_config.h
-  ${INCLUDE_ROOT}/messages.h
-  ${INCLUDE_ROOT}/options.h
-  ${INCLUDE_ROOT}/persistent_value.h
-  ${INCLUDE_ROOT}/pick.h
   ${INCLUDE_ROOT}/pick.ipp
-  ${INCLUDE_ROOT}/point_cloud.h
-  ${INCLUDE_ROOT}/point_cloud.ipp
-  ${INCLUDE_ROOT}/point_cloud_color_quantity.h
-  ${INCLUDE_ROOT}/point_cloud_quantity.h
-  ${INCLUDE_ROOT}/point_cloud_scalar_quantity.h
-  ${INCLUDE_ROOT}/point_cloud_parameterization_quantity.h
-  ${INCLUDE_ROOT}/point_cloud_vector_quantity.h
-  ${INCLUDE_ROOT}/polyscope.h
-  ${INCLUDE_ROOT}/quantity.h
-  ${INCLUDE_ROOT}/quantity.ipp
-  ${INCLUDE_ROOT}/render/color_maps.h
-  ${INCLUDE_ROOT}/render/engine.h
-  ${INCLUDE_ROOT}/render/engine.ipp
-  ${INCLUDE_ROOT}/render/ground_plane.h
-  ${INCLUDE_ROOT}/render/material_defs.h
-  ${INCLUDE_ROOT}/render/materials.h
-  ${INCLUDE_ROOT}/ribbon_artist.h
-  ${INCLUDE_ROOT}/scaled_value.h
+  ${INCLUDE_ROOT}/affine_remapper.ipp
+  ${INCLUDE_ROOT}/transformation_gizmo.h
+  ${INCLUDE_ROOT}/internal.h
   ${INCLUDE_ROOT}/screenshot.h
+  ${INCLUDE_ROOT}/point_cloud.ipp
+  ${INCLUDE_ROOT}/surface_parameterization_quantity.h
+  ${INCLUDE_ROOT}/file_helpers.h
+  ${INCLUDE_ROOT}/surface_scalar_quantity.h
+  ${INCLUDE_ROOT}/scalar_quantity.h
+  ${INCLUDE_ROOT}/curve_network.ipp
+  ${INCLUDE_ROOT}/curve_network_quantity.h
+  ${INCLUDE_ROOT}/surface_mesh.ipp
+  ${INCLUDE_ROOT}/widget.h
+  ${INCLUDE_ROOT}/combining_hash_functions.h
+  ${INCLUDE_ROOT}/vector_artist.h
+  ${INCLUDE_ROOT}/surface_mesh_io.h
+  ${INCLUDE_ROOT}/utilities.h
+  ${INCLUDE_ROOT}/pick.h
+  ${INCLUDE_ROOT}/curve_network_color_quantity.h
+  ${INCLUDE_ROOT}/ribbon_artist.h
+  ${INCLUDE_ROOT}/histogram.h
+  ${INCLUDE_ROOT}/surface_vector_quantity.h
+  ${INCLUDE_ROOT}/curve_network_scalar_quantity.h
+  ${INCLUDE_ROOT}/disjoint_sets.h
   ${INCLUDE_ROOT}/slice_plane.h
-  ${INCLUDE_ROOT}/standardize_data_array.h
-  ${INCLUDE_ROOT}/structure.h
-  ${INCLUDE_ROOT}/structure.ipp
+  ${INCLUDE_ROOT}/surface_parameterization_enums.h
+  ${INCLUDE_ROOT}/volume_mesh_color_quantity.h
+  ${INCLUDE_ROOT}/quantity.ipp
   ${INCLUDE_ROOT}/surface_color_quantity.h
   ${INCLUDE_ROOT}/surface_count_quantity.h
-  ${INCLUDE_ROOT}/surface_distance_quantity.h
-  ${INCLUDE_ROOT}/surface_graph_quantity.h
-  ${INCLUDE_ROOT}/surface_input_curve_quantity.h
-  ${INCLUDE_ROOT}/surface_mesh.h
-  ${INCLUDE_ROOT}/surface_mesh.ipp
-  ${INCLUDE_ROOT}/surface_mesh_io.h
-  ${INCLUDE_ROOT}/surface_mesh_quantity.h
-  ${INCLUDE_ROOT}/surface_parameterization_enums.h
-  ${INCLUDE_ROOT}/surface_parameterization_quantity.h
-  ${INCLUDE_ROOT}/surface_scalar_quantity.h
-  ${INCLUDE_ROOT}/surface_selection_quantity.h
   ${INCLUDE_ROOT}/surface_subset_quantity.h
-  ${INCLUDE_ROOT}/surface_vector_quantity.h
-  ${INCLUDE_ROOT}/trace_vector_field.h
-  ${INCLUDE_ROOT}/types.h
-  ${INCLUDE_ROOT}/utilities.h
-  ${INCLUDE_ROOT}/view.h
-  ${INCLUDE_ROOT}/volume_mesh.h
+  ${INCLUDE_ROOT}/volume_mesh_vector_quantity.h
   ${INCLUDE_ROOT}/volume_mesh.ipp
+  ${INCLUDE_ROOT}/point_cloud.h
+  ${INCLUDE_ROOT}/quantity.h
+  ${INCLUDE_ROOT}/messages.h
+  ${INCLUDE_ROOT}/types.h
+  ${INCLUDE_ROOT}/camera_parameters.h
+  ${INCLUDE_ROOT}/affine_remapper.h
+  ${INCLUDE_ROOT}/curve_network.h
+  ${INCLUDE_ROOT}/scalar_quantity.ipp
+  ${INCLUDE_ROOT}/view.h
+  ${INCLUDE_ROOT}/scaled_value.h
+  ${INCLUDE_ROOT}/colors.h
+  ${INCLUDE_ROOT}/structure.h
+  ${INCLUDE_ROOT}/structure.ipp
+  ${INCLUDE_ROOT}/surface_input_curve_quantity.h
+  ${INCLUDE_ROOT}/surface_selection_quantity.h
+  ${INCLUDE_ROOT}/point_cloud_parameterization_quantity.h
+  ${INCLUDE_ROOT}/point_cloud_vector_quantity.h
+  ${INCLUDE_ROOT}/standardize_data_array.h
+  ${INCLUDE_ROOT}/volume_mesh_scalar_quantity.h
+  ${INCLUDE_ROOT}/polyscope.h
+  ${INCLUDE_ROOT}/image_scalar_artist.h
+  ${INCLUDE_ROOT}/trace_vector_field.h
+  ${INCLUDE_ROOT}/render/color_maps.h
+  ${INCLUDE_ROOT}/render/mock_opengl/mock_gl_engine.h
+  ${INCLUDE_ROOT}/render/ground_plane.h
+  ${INCLUDE_ROOT}/render/colormap_defs.h
+  ${INCLUDE_ROOT}/render/opengl/shaders/sphere_shaders.h
+  ${INCLUDE_ROOT}/render/opengl/shaders/vector_shaders.h
+  ${INCLUDE_ROOT}/render/opengl/shaders/volume_mesh_shaders.h
+  ${INCLUDE_ROOT}/render/opengl/shaders/common.h
+  ${INCLUDE_ROOT}/render/opengl/shaders/histogram_shaders.h
+  ${INCLUDE_ROOT}/render/opengl/shaders/ground_plane_shaders.h
+  ${INCLUDE_ROOT}/render/opengl/shaders/lighting_shaders.h
+  ${INCLUDE_ROOT}/render/opengl/shaders/texture_draw_shaders.h
+  ${INCLUDE_ROOT}/render/opengl/shaders/rules.h
+  ${INCLUDE_ROOT}/render/opengl/shaders/gizmo_shaders.h
+  ${INCLUDE_ROOT}/render/opengl/shaders/surface_mesh_shaders.h
+  ${INCLUDE_ROOT}/render/opengl/shaders/ribbon_shaders.h
+  ${INCLUDE_ROOT}/render/opengl/shaders/cylinder_shaders.h
+  ${INCLUDE_ROOT}/render/opengl/gl_shaders.h
+  ${INCLUDE_ROOT}/render/opengl/gl_engine.h
+  ${INCLUDE_ROOT}/render/materials.h
+  ${INCLUDE_ROOT}/render/material_defs.h
+  ${INCLUDE_ROOT}/render/engine.ipp
+  ${INCLUDE_ROOT}/render/shader_builder.h
+  ${INCLUDE_ROOT}/render/engine.h
+  ${INCLUDE_ROOT}/surface_mesh.h
+  ${INCLUDE_ROOT}/surface_mesh_quantity.h
+  ${INCLUDE_ROOT}/surface_graph_quantity.h
+  ${INCLUDE_ROOT}/point_cloud_quantity.h
   ${INCLUDE_ROOT}/volume_mesh_quantity.h
+  ${INCLUDE_ROOT}/surface_distance_quantity.h
+  ${INCLUDE_ROOT}/options.h
+  ${INCLUDE_ROOT}/volume_mesh.h
+  ${INCLUDE_ROOT}/point_cloud_scalar_quantity.h
+  ${INCLUDE_ROOT}/persistent_value.h
+  ${INCLUDE_ROOT}/color_management.h
+  ${INCLUDE_ROOT}/curve_network_vector_quantity.h
+  ${INCLUDE_ROOT}/imgui_config.h
+  ${INCLUDE_ROOT}/point_cloud_color_quantity.h
 )
 
+
 # Create a single library for the project
-add_library(polyscope ${SRCS} ${BACKEND_SRCS} ${HEADERS} ${BACKEND_HEADERS})
+add_library(polyscope SHARED ${SRCS} ${BACKEND_SRCS} ${HEADERS} ${BACKEND_HEADERS})
 
 set_target_properties(polyscope PROPERTIES PUBLIC_HEADER "${HEADERS}")
 
