@@ -19,4 +19,17 @@ add_subdirectory(src)
 
 install(TARGETS polyscope
         DESTINATION lib
-        PUBLIC_HEADER DESTINATION include/polyscope)
+        PUBLIC_HEADER DESTINATION /tmp/polyscope)
+install(DIRECTORY "${CMAKE_SOURCE_DIR}/include/polyscope" # source directory
+        DESTINATION "include" # target directory
+        FILES_MATCHING # install only matched files
+        PATTERN "*.h" # select header files
+        PATTERN "*.hpp" # select header files
+        PATTERN "*.ipp" # select header files
+)
+# install(DIRECTORY "${CMAKE_SOURCE_DIR}/deps/" # source directory
+#         DESTINATION "include" # target directory
+#         FILES_MATCHING # install only matched files
+#         PATTERN "*.h" # select header files
+#         PATTERN "*.hpp" # select header files
+# )

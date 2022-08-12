@@ -301,7 +301,7 @@ SET(HEADERS
 # Create a single library for the project
 add_library(polyscope SHARED ${SRCS} ${BACKEND_SRCS} ${HEADERS} ${BACKEND_HEADERS})
 
-set_target_properties(polyscope PROPERTIES PUBLIC_HEADER "${HEADERS}")
+# set_target_properties(polyscope PROPERTIES PUBLIC_HEADER "${HEADERS};${DEPENDENCIES_HEADERS}")
 
 # Required compiler settings
 set_property(TARGET polyscope PROPERTY CXX_STANDARD 11)
