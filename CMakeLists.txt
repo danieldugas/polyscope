@@ -16,3 +16,7 @@ add_subdirectory(deps)
 
 ### Add things for this project
 add_subdirectory(src)
+
+install(TARGETS polyscope
+        DESTINATION lib
+        PUBLIC_HEADER DESTINATION include/polyscope)
